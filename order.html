@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurant Menu</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="menu.css">
+        <link rel="stylesheet" type="text/css" href="order.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="./images/logo.png" alt="logo" class="logo">
+            </div>
+            <div class="nav-right">
+                <button id="login-button"><a href="./signup.html" style="text-decoration: none; color: white;">Login</a></button>
+                <ul class="nav-menu">
+                <a href="index.html" ><li>Home</li></a>
+                <a href="menu.html" ><li>Our Menu </li></a>
+                <a href="offer.html"><li>Our Offer</li></a>
+                <a href="about.html"><li>Knows us more</li></a>
+                <a href="order.html"><li>Your Order</li></a>
+                <a href="cart.html"><li>cart(<span id="cartSize">0</span>)</li></a>
+                </ul>
+            </div>
+        </nav>
+        <h1>YOUR ORDERS</h1>
+        <section class="order-sections">
+            <table class="order-table">
+                <thead class="order-table-head">
+                    <tr>
+                        <th class="order-table-head-cell">Order No.</th>
+                        <th class="order-table-head-cell">Order details</th>
+                    
+                        <th class="order-table-head-cell">Total Price</th>
+                        <th class="order-table-head-cell">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="order-table-body">
+                </tbody>
+            </table>
+        </section>
+        <script src="order.js"></script>
+    </body>
+</html>

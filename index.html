@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurent Menu App</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="./images/logo.png" alt="Logo" >
+        </div>
+        <div class="nav-right">
+           <a href="./signup.html"><button id="login-button">Login</button></a>
+
+            <ul class="nav-menu">
+                <a href="index.html" ><li>Home</li></a>
+                <a href="menu.html" ><li>Our Menu </li></a>
+                <a href="offer.html"><li>Our Offer</li></a>
+                <a href="about.html"><li>Knows us more</li></a>
+                <a href="order.html"><li>Your Order</li></a>
+                <a href="cart.html"><li>cart(<span id="cartSize">0</span>)</li></a>
+            </ul>
+            
+        </div>
+    </nav>
+    <section id="offers" class="offer-section">
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="./images/top-view-fried-potatoes-with-seasonings-different-vegetables-dark-surface.jpg" alt="Fried Potatoes">
+      <div class="text">Hot & Crispy Deals - 30% OFF</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./images/top-view-tasty-salad-with-ingredients-grey-salad-food-health-diet.jpg" alt="Healthy Salad">
+      <div class="text">Fresh Salad Combos - Flat ₹50 OFF</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./images/vegetables-plate-roasted-vegetables-spices-vegetables.jpg" alt="Veggie Platter">
+      <div class="text">Healthy Bites for Your Cravings</div>
+    </div>
+
+  </div>
+</section>
+<div id="menu-container">
+  <span id="menu-title">Our Menu</span>
+   <div class="top-3-component">
+    <div class="top-3-title">
+        <span>Best Seller</span>
+        <button>View All</button>
+    </div>
+    <div class="top-3-card">
+      <div class="food-card">
+        <img src="./images/bestseller-1.jpg" alt="Food Item 1">
+        <span class="food-card-name">Best Seller Item 1</span>
+        <span class="food-card-description">Pizza</span>
+        <span class="food-card-price">Price: ₹199  10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+
+      </div>
+      <div class="food-card">
+        <img src="./images/bestseller-2.jpg" alt="Food Item 2">
+        <span class="food-card-name">Best Seller Item 2</span>
+        <span class="food-card-description">Pasta</span>
+        <span class="food-card-price">Price: ₹179  10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+
+      </div>
+      <div class="food-card">
+        <img src="./images/bestseller-3.jpg" alt="Food Item 3">
+        <span class="food-card-name">Best Seller Item 3</span>
+        <span class="food-card-description">Burger</span>
+        <span class="food-card-price">Price: ₹209  10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+        
+
+      </div>
+    </div>
+
+   </div>
+   <div class="top-3-component">
+    <div class="top-3-title">
+        <span>Trending</span>
+        <button>View All</button>
+    </div>
+    <div class="top-3-card">
+      <div class="food-card">
+        <img src="./images/trending-1.jpg" alt="Food Item 1">
+        <span class="food-card-name">Trending Item 1</span>
+        <span class="food-card-description">Samosa </span>
+        <span class="food-card-price">Price: ₹99  10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+
+      </div>
+      <div class="food-card">
+        <img src="./images/trending-2.jpg" alt="Food Item 2">
+        <span class="food-card-name">Trending Item 2</span>
+        <span class="food-card-description">Sandwich</span>
+        <span class="food-card-price">Price: ₹129  10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+
+      </div>
+      <div class="food-card">
+        <img src="./images/trending-3.jpg" alt="Food Item 3">
+        <span class="food-card-name">Trending Item 3</span>
+        <span class="food-card-description">Fries</span>
+        <span class="food-card-price">Price: ₹109 10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+        
+
+      </div>
+    </div>
+
+    
+   </div>
+   <div class="top-3-component">
+    <!-- Starters -->
+     <div class="top-3-title">
+        <span>Starters</span>
+        <button>View All</button>
+    </div>
+    <div class="top-3-card">
+      <div class="food-card">
+        <img src="./images/Starter-1.jpg" alt="Food Item 1">
+        <span class="food-card-name">Starters Item 1</span>
+        <span class="food-card-description">Garlic Bread</span>
+        <span class="food-card-price">Price: ₹129  10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+
+      </div>
+      <div class="food-card">
+        <img src="./images/Starter-2.jpg" alt="Food Item 2">
+        <span class="food-card-name">Starters Item 2</span>
+        <span class="food-card-description">Soup </span>
+        <span class="food-card-price">Price: ₹99  10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+
+      </div>
+      <div class="food-card">
+        <img src="./images/Starter-3.jpg" alt="Food Item 3">
+        <span class="food-card-name">Starters Item 3</span>
+        <span class="food-card-description">Masrom Pizza</span>
+        <span class="food-card-price">Price: ₹199 10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+        
+
+      </div>
+    </div>
+
+
+    
+   </div>
+   <div class="top-3-component">
+    <!-- Beverages -->
+     <div class="top-3-title">
+        <span>Beverages</span>
+        <button>View All</button>
+    </div>
+    <div class="top-3-card">
+      <div class="food-card">
+        <img src="./images/Bev-1.jpg" alt="Food Item 1">
+        <span class="food-card-name">Beverages Item 1</span>
+        <span class="food-card-description">Lemon-Cocktail</span>
+        <span class="food-card-price">Price: ₹129  10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+
+      </div>
+      <div class="food-card">
+        <img src="./images/Bev-2.jpg" alt="Food Item 2">
+        <span class="food-card-name">Beverages Item 2</span>
+        <span class="food-card-description">Cola-with-ice-cubes</span>
+        <span class="food-card-price">Price: ₹99  10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+
+      </div>
+      <div class="food-card">
+        <img src="./images/Bev-3.jpg" alt="Food Item 3">
+        <span class="food-card-name">Beverages Item 3</span>
+        <span class="food-card-description">Mojito-Cocktail</span>
+        <span class="food-card-price">Price: ₹199 10% off</span>
+        <button class="add-to-cart-button">Add to Cart</button>
+        
+
+      </div>
+    </div>
+
+
+
+   </div>
+</div>
+&nbsp;
+
+<footer class="footer">
+      <div class="footer-content">
+        <!-- Logo Section -->
+        <div class="footer-section logo-section">
+          <img src="./images/logo.png" alt="Shop Logo" class="footer-logo" />
+        </div>
+    
+        <!-- Quick Links Section -->
+        <div class="footer-section links-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="offer.html">Our Offers</a></li>
+            <li><a href="about.html">Know What We Have Achieved</a></li>
+          </ul>
+        </div>
+    
+        <!-- Social & Subscription Section -->
+        <div class="footer-section social-subscribe">
+          <h3>Wanna Get Updated with Our Exciting Offers?</h3>
+          <div class="social-links">
+            <p>Follow us on:</p>
+            <a href="https://www.instagram.com/" class="social-link">Instagram</a> |
+                    <a href="https://www.Facebook.com/" class="social-link">Facebook</a> |
+                    <a href="https://x.com/" class="social-link">Twitter</a>
+          </div>
+          <hr />
+          <div class="subscribe-form">
+            <input type="email" placeholder="Subscribe for daily exciting offers" />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          <a href="#terms">Terms & Conditions</a> |
+          <a href="#privacy">Privacy Policy</a>    |
+          <a href="#reserved">&copy; 2025 Keshav Restaurant. All rights reserved</a>
+        </p>
+       
+      </div>
+    </footer>
+</body>
+<script>
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+</html>

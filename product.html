@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurent Menu App</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="product.css">
+    <script src="https://kit.fontawesome.com/b16e24325a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="./images/logo.png" alt="Logo" >
+        </div>
+        <div class="nav-right">
+           <a href="./signup.html"><button id="login-button">Login</button></a>
+
+            <ul class="nav-menu">
+                <a href="index.html" ><li>Home</li></a>
+                <a href="menu.html" ><li>Our Menu </li></a>
+                <a href="offer.html"><li>Our Offer</li></a>
+                <a href="about.html"><li>Knows us more</li></a>
+                <a href="order.html"><li>Your Order</li></a>
+                <a href="cart.html"><li>cart(<span id="cartSize">0</span>)</li></a>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <div class="product-details-container">
+            <div class="product-details-card">
+                <div id="product-image">
+                    <!-- <img src="best-seller-1.jpg" alt="product1" class="product-image"> -->
+                </div>
+                <div class="product-details">
+                    <h1 id="product-name"></h1>
+                    <span class="rating star-color">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        (4.0/5)
+                    </span>
+                    <p id="product-description"></p>
+                    <p id="product-price"></p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="buy-now">Order It</button>
+                    </div>
+                </div>   
+            </div>
+        </div>
+   
+&nbsp;
+
+
+
+<footer class="footer">
+      <div class="footer-content">
+        <!-- Logo Section -->
+        <div class="footer-section logo-section">
+          <img src="./images/logo.png" alt="Shop Logo" class="footer-logo" />
+        </div>
+    
+        <!-- Quick Links Section -->
+        <div class="footer-section links-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="offer.html">Our Offers</a></li>
+            <li><a href="about.html">Know What We Have Achieved</a></li>
+          </ul>
+        </div>
+    
+        <!-- Social & Subscription Section -->
+        <div class="footer-section social-subscribe">
+          <h3>Wanna Get Updated with Our Exciting Offers?</h3>
+          <div class="social-links">
+            <p>Follow us on:</p>
+                    <a href="https://www.instagram.com/" class="social-link">Instagram</a> |
+                    <a href="https://www.Facebook.com/" class="social-link">Facebook</a> |
+                    <a href="https://x.com/" class="social-link">Twitter</a>
+          </div>
+          <hr />
+          <div class="subscribe-form">
+            <input type="email" placeholder="Subscribe for daily exciting offers" />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          <a href="#terms">Terms & Conditions</a> |
+          <a href="#privacy">Privacy Policy</a>    |
+          <a href="#reserved">&copy; 2025 Keshav Restaurant. All rights reserved</a>
+        </p>
+       
+      </div>
+    </footer>
+    <script  src="menulist.js"></script>
+    <script src="menu.js"></script>
+    <script src="product.js"></script>
+</body>
+
+</html>
