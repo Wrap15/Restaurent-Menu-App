@@ -1,35 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Restaurent Menu App</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="signup.css">
-
-</head>
-<body>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu App</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="nav-left">
-            <img src="./images/logo.png" alt="Logo" >
-        </div>
+      <div class="nav-left">
+        <img
+          src="./images/logo.png"
+          alt="Logo"
+          style="height: 44px; max-width: 90px"
+        />
+      </div>
     </nav>
     <div class="signup-body">
-            <form>
-                <h2>Let us know about you!</h2>
-                <label for="name">Full Name :</label>
-                <input id="name" type="text" placeholder="Enter your name" required>
-                <label for="email">Email Address :</label>
-                <input id="email" type="text" placeholder="Enter your email address" required>
-                <label for="mobile">Mobile Number :</label>
-                <input id="mobile" type="text" placeholder="Enter your name" required>
-                <button id="signup-button">Sign Up</button>
-                <p>Already our customer? <a href="./SignIn.html">Login</a></p>
-            </form>
-        </div>
-        <script src="signup.js"></script>
-
-    </body>
-    </html>
-
-
-    
+      <form autocomplete="on">
+        <h2>Let us know about you!</h2>
+        <label for="name">Full Name :</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Enter your name"
+          required
+          autocomplete="name"
+        />
+        <label for="email">Email Address :</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email address"
+          required
+          autocomplete="email"
+        />
+        <label for="mobile">Mobile Number :</label>
+        <input
+          id="mobile"
+          name="mobile"
+          type="tel"
+          placeholder="Enter your mobile number"
+          required
+          autocomplete="tel"
+        />
+        <button id="signup-button" type="submit">Sign Up</button>
+        <p>Already our customer? <a href="./signin.html">Login</a></p>
+      </form>
+    </div>
+    <script src="signup.js"></script>
+  </body>
+</html>

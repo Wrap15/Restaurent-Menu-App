@@ -1,7 +1,123 @@
-/* Base Styles */
-body {
+/* Hamburger Nav Toggle Button */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 300;
+  margin-left: 10px;
+}
+.nav-toggle .bar {
+  width: 28px;
+  height: 4px;
+  background-color: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 200;
+    border-bottom: 1px solid #222;
+    gap: 0;
+    padding: 0;
+    transition: max-height 0.3s;
+    display: flex;
+  }
+  .nav-menu.active {
+    max-height: 400px;
+    padding: 1rem 0;
+    gap: 1.2rem;
+  }
+  .nav-menu li {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .login-btn {
+    margin: 0 auto;
+    width: 90%;
+    display: block;
+  }
+}
+/* --- Responsive Navbar for Mobile --- */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+  }
+  .logo img {
+    height: 38px;
+    max-width: 80px;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 200;
+    border-bottom: 1px solid #222;
+    gap: 0;
+    padding: 0;
+    transition: max-height 0.3s;
+    display: flex;
+  }
+  .nav-menu.active {
+    max-height: 400px;
+    padding: 1rem 0;
+    gap: 1.2rem;
+  }
+  .nav-menu li {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .login-btn {
+    margin: 0 auto;
+    width: 90%;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    padding: 0.3rem 0.5rem;
+  }
+  .logo img {
+    height: 32px;
+    max-width: 60px;
+  }
+  .nav-menu {
+    top: 48px;
+    font-size: 0.98rem;
+  }
+}
+
+Base Styles body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #fefefe;
   color: #333;
 }
@@ -39,11 +155,6 @@ a {
   transition: background 0.3s;
 }
 
-.nav-menu a:hover,
-.nav-menu .active {
-  background-color: #c62828;
-}
-
 .login-btn {
   background-color: red;
   color: #e63946;
@@ -54,7 +165,8 @@ a {
 
 /* Hero Section */
 .hero {
-  background: url('./images/restaurant-interior.jpg') no-repeat center center/cover;
+  background: url("./images/restaurant-interior.jpg") no-repeat center
+    center/cover;
   height: 88vh;
   display: flex;
   align-items: center;
@@ -71,9 +183,10 @@ a {
 }
 
 .hero h1 {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 3rem;
   margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 .hero p {
@@ -85,11 +198,12 @@ a {
   padding: 60px 20px;
   max-width: 1100px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .section h2 {
   text-align: center;
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   margin-bottom: 30px;
   font-size: 2rem;
   color: #e63946;
@@ -101,6 +215,7 @@ a {
   gap: 40px;
   align-items: center;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .content > div,
@@ -114,7 +229,8 @@ a {
   max-width: 500px;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
 /* Testimonials */
@@ -123,6 +239,7 @@ a {
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .testimonial {
@@ -131,7 +248,8 @@ a {
   border-radius: 10px;
   width: 260px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 18px;
 }
 
 .testimonial img {
@@ -153,6 +271,8 @@ a {
   gap: 15px;
   max-width: 600px;
   margin: auto;
+  box-sizing: border-box;
+  padding: 0 4px;
 }
 
 .feedback-form input,
@@ -184,23 +304,6 @@ a {
   background-color: #c62828;
 }
 
-/* Footer */
-.footer {
-  background-color: #2b2d42;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.footer a {
-  color: #ffb347;
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-.footer a:hover {
-  color: #fff;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -224,5 +327,58 @@ a {
   .testimonial {
     width: 100%;
     max-width: 300px;
+  }
+  .section {
+    padding: 36px 6px;
+  }
+  .feedback-form {
+    padding: 0 2px;
+  }
+  .img-rounded {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    height: 48vh;
+    min-height: 220px;
+    padding: 0;
+  }
+  .hero .overlay {
+    padding: 1rem 0.5rem;
+    border-radius: 7px;
+  }
+  .hero h1 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+  .section {
+    padding: 18px 2px;
+  }
+  .section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+  .testimonial {
+    padding: 10px;
+    font-size: 0.98rem;
+  }
+  .feedback-form input,
+  .feedback-form textarea {
+    font-size: 0.98rem;
+    padding: 8px;
+  }
+  .btn-primary {
+    font-size: 0.98rem;
+    padding: 8px 12px;
+    border-radius: 18px;
+  }
+  .footer {
+    font-size: 0.95rem;
+    padding: 18px 2px;
   }
 }

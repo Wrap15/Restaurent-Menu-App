@@ -1,47 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Restaurant Menu</title>
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" type="text/css" href="menu.css">
-        <link rel="stylesheet" type="text/css" href="order.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="nav-left">
-                <img src="./images/logo.png" alt="logo" class="logo">
-            </div>
-            <div class="nav-right">
-                <button id="login-button"><a href="./signup.html" style="text-decoration: none; color: white;">Login</a></button>
-                <ul class="nav-menu">
-                <a href="index.html" ><li>Home</li></a>
-                <a href="menu.html" ><li>Our Menu </li></a>
-                <a href="offer.html"><li>Our Offer</li></a>
-                <a href="about.html"><li>Knows us more</li></a>
-                <a href="order.html"><li>Your Order</li></a>
-                <a href="cart.html"><li>cart(<span id="cartSize">0</span>)</li></a>
-                </ul>
-            </div>
-        </nav>
-        <h1>YOUR ORDERS</h1>
-        <section class="order-sections">
-            <table class="order-table">
-                <thead class="order-table-head">
-                    <tr>
-                        <th class="order-table-head-cell">Order No.</th>
-                        <th class="order-table-head-cell">Order details</th>
-                    
-                        <th class="order-table-head-cell">Total Price</th>
-                        <th class="order-table-head-cell">Status</th>
-                    </tr>
-                </thead>
-                <tbody id="order-table-body">
-                </tbody>
-            </table>
-        </section>
-        <script src="order.js"></script>
-    </body>
+  <head>
+    <title>Restaurant Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="menu.css" />
+    <link rel="stylesheet" type="text/css" href="order.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="./images/logo.png" alt="logo" class="logo" />
+      </div>
+      <div class="nav-right">
+        <a href="./signup.html" id="login-link"
+          ><button id="login-button">Login</button></a
+        >
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNavMenu()"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-menu">
+          <a href="index.html"><li>Home</li></a>
+          <a href="menu.html"><li>Our Menu</li></a>
+          <a href="offer.html"><li>Our Offer</li></a>
+          <a href="about.html"><li>Knows us more</li></a>
+          <a href="order.html"><li>Your Order</li></a>
+          <a href="cart.html"
+            ><li>Cart</li></a
+          >
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <h1>YOUR ORDERS</h1>
+      <section class="order-sections" aria-label="Order List">
+        <div class="order-table-responsive">
+          <table class="order-table" aria-describedby="order-table-caption">
+            <caption id="order-table-caption" style="display: none">
+              Your order history
+            </caption>
+            <thead class="order-table-head">
+              <tr>
+                <th class="order-table-head-cell" scope="col">Order No.</th>
+                <th class="order-table-head-cell" scope="col">Order details</th>
+                <th class="order-table-head-cell" scope="col">Total Price</th>
+                <th class="order-table-head-cell" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody id="order-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="order.js"></script>
+    <script>
+      // Responsive Navbar Toggle
+      function toggleNavMenu() {
+        const navMenu = document.querySelector(".nav-menu");
+        navMenu.classList.toggle("active");
+      }
+      // Login/Logout Toggle (optional, for consistency)
+      const loginBtn = document.getElementById("login-button");
+      const loginLink = document.getElementById("login-link");
+      if (loginBtn && loginLink) {
+        let isLoggedIn = false;
+        loginBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          isLoggedIn = !isLoggedIn;
+          if (isLoggedIn) {
+            loginBtn.textContent = "Logout";
+            loginLink.setAttribute("href", "#");
+          } else {
+            loginBtn.textContent = "Login";
+            loginLink.setAttribute("href", "./signup.html");
+          }
+        });
+      }
+    </script>
+  </body>
 </html>

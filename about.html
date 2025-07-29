@@ -1,137 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keshav Restaurant | About Us</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins&display=swap" rel="stylesheet">
-    
-  <link rel="stylesheet" href="about.css">
-</head>
-<body>
-
-  <nav class="navbar">
-    <div class="logo"><img src="./images/logo.png" alt="Keshav Restaurant Logo"></div>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Our Menu</a></li>
-      <li><a href="offer.html">Our Offers</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="order.html">Orders</a></li>
-      <li><a href="cart.html">Cart (<span id="cartSize">0</span>)</a></li>
-      <li><a href="signup.html" class="login-btn">Login</a></li>
-    </ul>
-  </nav>
-
-  <header class="hero">
-    <div class="overlay">
-      <h1>Welcome to Keshav Restaurant</h1>
-      <p>Pure Veg | Authentic Flavors | 4-Star Experience</p>
-    </div>
-  </header>
-
-  <section class="section about">
-    <div class="content">
-      <img src="./images/restaurant-room-with-guns-wall.jpg" alt="Interior" class="img-rounded">
-      <div>
-        <h2>About Us</h2>
-        <p>Founded in 1999, Keshav Restaurant brings together the richness of Punjabi, Gujarati, and Chinese cuisines. Every dish is made with love, tradition, and the finest ingredients to offer a memorable experience for all food lovers.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section founder">
-    <div class="content">
-      <div>
-        <h2>Founder's Note</h2>
-        <p>I am <strong>Dhaval Panchal</strong>, founder of Keshav Restaurant. My vision has always been to serve healthy, flavorful, and vegetarian meals in an atmosphere of warmth and hospitality. Your satisfaction is what fuels our passion.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section speciality">
-    <div class="content">
-      <img src="./images/top-view-fried-potatoes-with-seasonings-different-vegetables-dark-surface.jpg" alt="Special Dishes" class="img-rounded">
-      <div>
-        <h2>Our Specialties</h2>
-        <p>Whether you're craving Khichdi, Masala Dosa, Cheesy Pizza, Samosas or Paneer Tikka — our menu offers the best of vegetarian culinary delights. Experience quality with every bite!</p>
-        <a href="menu.html" class="btn-primary">Explore Menu</a>
-      </div>
-    </div>
-  </section>
-
-
-  <div class="testimonial-carousel" id="testimonialContainer">
-  <!-- Static testimonials here -->
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keshav Restaurant | About Us</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css" />
+  </head>
   
-    <section class="section feedback">
-        <h2>We Value Your Feedback</h2>
-        
-    
-
-  <form id="feedbackForm" class="feedback-form">
-  <input type="text" id="feedbackName" placeholder="Your Name" required>
-  <input type="email" id="feedbackEmail" placeholder="Your Email" required>
-  <textarea id="feedbackMessage" placeholder="Your Feedback" rows="5" required></textarea>
-  <button type="submit" class="btn-primary">Submit</button>
-</form>
-</section>
-<footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 Keshav Restaurant. All rights reserved.</p>
-      <div>
-        <a href="https://www.instagram.com/">Instagram</a> | <a href="https://www.Facebook.com/">Facebook</a> | <a href="https://www.x.com/">Twitter</a>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./images/logo.png" alt="Keshav Restaurant Logo" />
       </div>
+      <button
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="offer.html">Our Offers</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="order.html">Orders</a></li>
+        <li>
+          <a href="cart.html">Cart</a>
+        </li>
+        <li><a href="signup.html" class="login-btn">Login</a></li>
+      </ul>
+    </nav>
+
+    <body>
+    <header class="hero">
+      <div class="overlay">
+        <h1>Welcome to Keshav Restaurant</h1>
+        <p>Pure Veg | Authentic Flavors | 4-Star Experience</p>
+      </div>
+    </header>
+
+    <section class="section about">
+      <div class="content">
+        <img
+          src="./images/restaurant-room-with-guns-wall.jpg"
+          alt="Interior"
+          class="img-rounded"
+        />
+        <div>
+          <h2>About Us</h2>
+          <p>
+            Founded in 1999, Keshav Restaurant brings together the richness of
+            Punjabi, Gujarati, and Chinese cuisines. Every dish is made with
+            love, tradition, and the finest ingredients to offer a memorable
+            experience for all food lovers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section founder">
+      <div class="content">
+        <div>
+          <h2>Founder's Note</h2>
+          <p>
+            I am <strong>Dhaval Panchal</strong>, founder of Keshav Restaurant.
+            My vision has always been to serve healthy, flavorful, and
+            vegetarian meals in an atmosphere of warmth and hospitality. Your
+            satisfaction is what fuels our passion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section speciality">
+      <div class="content">
+        <img
+          src="./images/top-view-fried-potatoes-with-seasonings-different-vegetables-dark-surface.jpg"
+          alt="Special Dishes"
+          class="img-rounded"
+        />
+        <div>
+          <h2>Our Specialties</h2>
+          <p>
+            Whether you're craving Khichdi, Masala Dosa, Cheesy Pizza, Samosas
+            or Paneer Tikka — our menu offers the best of vegetarian culinary
+            delights. Experience quality with every bite!
+          </p>
+          <a href="menu.html" class="btn-primary">Explore Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="testimonial-carousel" id="testimonialContainer">
+      <!-- Static testimonials here -->
     </div>
-</footer>
 
+    <section class="section feedback">
+      <h2>We Value Your Feedback</h2>
+      <form id="feedbackForm" class="feedback-form">
+        <input type="text" id="feedbackName" placeholder="Your Name" required />
+        <input
+          type="email"
+          id="feedbackEmail"
+          placeholder="Your Email"
+          required
+        />
+        <textarea
+          id="feedbackMessage"
+          placeholder="Your Feedback"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </section>
+  </body>
+  
 
-<script>
-  const feedbackForm = document.getElementById('feedbackForm');
-  const testimonialContainer = document.getElementById('testimonialContainer');
+  <footer class="footer">
+      <div class="footer-content">
+        <!-- Logo Section -->
+        <div class="footer-section logo-section">
+          <img src="./images/logo.png" alt="Shop Logo" class="footer-logo" />
+        </div>
+        <!-- Quick Links Section -->
+        <div class="footer-section links-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="offer.html">Our Offers</a></li>
+            <li><a href="about.html">Know What We Have Achieved</a></li>
+          </ul>
+        </div>
+        <!-- Social & Subscription Section -->
+        <div class="footer-section social-subscribe">
+          <h3>Wanna Get Updated with Our Exciting Offers?</h3>
+          <div class="social-links">
+            <p>Follow us on:</p>
+            <a href="https://www.instagram.com/" class="social-link"
+              >Instagram</a
+            >
+            |
+            <a href="https://www.Facebook.com/" class="social-link">Facebook</a>
+            |
+            <a href="https://x.com/" class="social-link">Twitter</a>
+          </div>
+          <hr />
+          <div class="subscribe-form">
+            <input
+              type="email"
+              placeholder="Subscribe for daily exciting offers"
+            />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          <a href="#terms">Terms & Conditions</a> |
+          <a href="#privacy">Privacy Policy</a> |
+          <a href="#reserved"
+            >&copy; 2025 Keshav Restaurant. All rights reserved</a
+          >
+        </p>
+      </div>
+    </footer>
 
-  // Load feedback from localStorage
-  function loadTestimonials() {
-    const feedbackList = JSON.parse(localStorage.getItem('feedbacks')) || [];
-    feedbackList.forEach(entry => {
-      const testimonial = document.createElement('div');
-      testimonial.classList.add('testimonial');
-      testimonial.innerHTML = `
-        <img src="https://placehold.co/100x100?text=${entry.name.charAt(0).toUpperCase()}" alt="${entry.name}">
+  <script>
+      // Nav toggle for mobile
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+      navToggle.addEventListener("click", function () {
+        const expanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", !expanded);
+        navMenu.classList.toggle("active");
+      });
+
+      const feedbackForm = document.getElementById("feedbackForm");
+      const testimonialContainer = document.getElementById(
+        "testimonialContainer"
+      );
+
+      // Load feedback from localStorage
+      function loadTestimonials() {
+        const feedbackList =
+          JSON.parse(localStorage.getItem("feedbacks")) || [];
+        feedbackList.forEach((entry) => {
+          const testimonial = document.createElement("div");
+          testimonial.classList.add("testimonial");
+          testimonial.innerHTML = `
+        <img src="https://placehold.co/100x100?text=${entry.name
+          .charAt(0)
+          .toUpperCase()}" alt="${entry.name}">
         <p>"${entry.message}"</p>
         <span>- ${entry.name}</span>
       `;
-      testimonialContainer.appendChild(testimonial);
-    });
-  }
+          testimonialContainer.appendChild(testimonial);
+        });
+      }
 
-  // Save feedback to localStorage
-  feedbackForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+      // Save feedback to localStorage
+      feedbackForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    const name = document.getElementById('feedbackName').value.trim();
-    const message = document.getElementById('feedbackMessage').value.trim();
+        const name = document.getElementById("feedbackName").value.trim();
+        const message = document.getElementById("feedbackMessage").value.trim();
 
-    const feedback = {
-      name,
-      message
-    };
+        const feedback = {
+          name,
+          message,
+        };
 
-    const existing = JSON.parse(localStorage.getItem('feedbacks')) || [];
-    existing.push(feedback);
-    localStorage.setItem('feedbacks', JSON.stringify(existing));
+        const existing = JSON.parse(localStorage.getItem("feedbacks")) || [];
+        existing.push(feedback);
+        localStorage.setItem("feedbacks", JSON.stringify(existing));
 
-    alert("Thank you for your feedback!");
+        alert("Thank you for your feedback!");
 
-    feedbackForm.reset();
-    testimonialContainer.innerHTML = ''; // Clear existing
-    loadTestimonials(); // Reload with new feedback
-  });
+        feedbackForm.reset();
+        testimonialContainer.innerHTML = ""; // Clear existing
+        loadTestimonials(); // Reload with new feedback
+      });
 
-  // Load on page load
-  window.addEventListener('DOMContentLoaded', loadTestimonials);
-</script>
-
-</body>
+      // Load on page load
+      window.addEventListener("DOMContentLoaded", loadTestimonials);
+    </script>
 </html>

@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Restaurent Menu App</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="menu.css">
-</head>
-<body>
-
+  <head>
+    <title>Restaurant Menu App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="menu.css" />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="nav-left">
-            <img src="./images/logo.png" alt="Logo" >
-        </div>
-        <div class="nav-right">
-           <a href="./signup.html"><button id="login-button">Login</button></a>
-
-            <ul class="nav-menu">
-                <a href="index.html" ><li>Home</li></a>
-                <a href="menu.html" ><li>Our Menu </li></a>
-                <a href="offer.html"><li>Our Offer</li></a>
-                <a href="about.html"><li>Knows us more</li></a>
-                <a href="order.html"><li>Your Order</li></a>
-                <a href="cart.html"><li>cart(<span id="cartSize">0</span>)</li></a>
-            </ul>
-            
-        </div>
+      <div class="nav-left">
+        <img src="./images/logo.png" alt="Logo" />
+      </div>
+      <div class="nav-right">
+        <a href="./signup.html" id="login-link"
+          ><button id="login-button">Login</button></a
+        >
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNavMenu()"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-menu">
+          <a href="index.html"><li>Home</li></a>
+          <a href="menu.html"><li>Our Menu</li></a>
+          <a href="offer.html"><li>Our Offer</li></a>
+          <a href="about.html"><li>Knows us more</li></a>
+          <a href="order.html"><li>Your Order</li></a>
+          <a href="cart.html"
+            ><li>Cart</li></a
+          >
+        </ul>
+      </div>
     </nav>
     <div class="menu-banner">
-  <div class="overlay">
-    <h1>OUR MENU</h1>
-  </div>
-</div>
+      <div class="overlay">
+        <h1>OUR MENU</h1>
+      </div>
+    </div>
     <div class="menu-search">
-      <input type="text" class="search-input" placeholder="What do you want to search...">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="What do you want to search..."
+        aria-label="Search menu"
+      />
       <div class="menu-search-categories">
         <button class="active">All</button>
         <button>Beverages</button>
@@ -39,33 +55,26 @@
         <button>Combos</button>
       </div>
     </div>
+
     <section class="search-sections">
-            <h1> Search Results </h1>
-            <div class="search-section-items">
-                <div class="search-items">
-                </div>
-            </div>
+      <h1>Search Results</h1>
+      <div class="search-section-items">
+        <div class="search-items"></div>
+      </div>
     </section>
-        <section class="menu-sections">
-            <h1> Best Seller </h1>
-            <div class="menu-section-items">
-                <div class="menu-items">
-                </div>
-            </div>
-        </section>
-    
-        
-   
-&nbsp;
+    <section class="menu-sections">
+      <h1>Best Seller</h1>
+      <div class="menu-section-items">
+        <div class="menu-items"></div>
+      </div>
+    </section>
 
-
-<footer class="footer">
+    <footer class="footer">
       <div class="footer-content">
         <!-- Logo Section -->
         <div class="footer-section logo-section">
           <img src="./images/logo.png" alt="Shop Logo" class="footer-logo" />
         </div>
-    
         <!-- Quick Links Section -->
         <div class="footer-section links-section">
           <h3>Quick Links</h3>
@@ -75,19 +84,25 @@
             <li><a href="about.html">Know What We Have Achieved</a></li>
           </ul>
         </div>
-    
         <!-- Social & Subscription Section -->
         <div class="footer-section social-subscribe">
           <h3>Wanna Get Updated with Our Exciting Offers?</h3>
           <div class="social-links">
             <p>Follow us on:</p>
-                    <a href="https://www.instagram.com/" class="social-link">Instagram</a> |
-                    <a href="https://www.Facebook.com/" class="social-link">Facebook</a> |
-                    <a href="https://x.com/" class="social-link">Twitter</a>
+            <a href="https://www.instagram.com/" class="social-link"
+              >Instagram</a
+            >
+            |
+            <a href="https://www.Facebook.com/" class="social-link">Facebook</a>
+            |
+            <a href="https://x.com/" class="social-link">Twitter</a>
           </div>
           <hr />
           <div class="subscribe-form">
-            <input type="email" placeholder="Subscribe for daily exciting offers" />
+            <input
+              type="email"
+              placeholder="Subscribe for daily exciting offers"
+            />
             <button type="button">Subscribe</button>
           </div>
         </div>
@@ -95,14 +110,36 @@
       <div class="footer-bottom">
         <p>
           <a href="#terms">Terms & Conditions</a> |
-          <a href="#privacy">Privacy Policy</a>    |
-          <a href="#reserved">&copy; 2025 Keshav Restaurant. All rights reserved</a>
+          <a href="#privacy">Privacy Policy</a> |
+          <a href="#reserved"
+            >&copy; 2025 Keshav Restaurant. All rights reserved</a
+          >
         </p>
-       
       </div>
     </footer>
     <script src="menulist.js"></script>
     <script src="menu.js"></script>
-</body>
-
+    <script>
+      // Responsive Navbar Toggle
+      function toggleNavMenu() {
+        const navMenu = document.querySelector(".nav-menu");
+        navMenu.classList.toggle("active");
+      }
+      // Login/Logout Toggle
+      const loginBtn = document.getElementById("login-button");
+      const loginLink = document.getElementById("login-link");
+      let isLoggedIn = false;
+      loginBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        isLoggedIn = !isLoggedIn;
+        if (isLoggedIn) {
+          loginBtn.textContent = "Logout";
+          loginLink.setAttribute("href", "#");
+        } else {
+          loginBtn.textContent = "Login";
+          loginLink.setAttribute("href", "./signup.html");
+        }
+      });
+    </script>
+  </body>
 </html>
