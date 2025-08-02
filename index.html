@@ -11,9 +11,7 @@
         <img src="./images/logo.png" alt="Logo" />
       </div>
       <div class="nav-right">
-        <a href="./signup.html" id="login-link"
-          ><button id="login-button">Login</button></a
-        >
+       
         <button
           class="nav-toggle"
           aria-label="Toggle navigation"
@@ -30,6 +28,8 @@
           <a href="about.html"><li>Knows us more</li></a>
           <a href="order.html"><li>Your Order</li></a>
           <a href="cart.html"><li>Cart</li></a>
+          <a href="./signup.html" id="login-link"><button id="login-button">Login</button></a>
+          
         </ul>
       </div>
     </nav>
@@ -260,17 +260,30 @@
 
     // Login/Logout Toggle
     const loginBtn = document.getElementById("login-button");
-    const loginLink = document.getElementById("login-link");
-    let isLoggedIn = false;
-    loginBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      isLoggedIn = !isLoggedIn;
-      if (isLoggedIn) {
+
+    // Check login state on page load
+    function updateLoginBtn() {
+      const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+      if (loggedIn) {
         loginBtn.textContent = "Logout";
-        loginLink.setAttribute("href", "#");
       } else {
         loginBtn.textContent = "Login";
-        loginLink.setAttribute("href", "./signup.html");
+      }
+    }
+    updateLoginBtn();
+
+    loginBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+      if (loggedIn) {
+        // Logout
+        localStorage.setItem("isLoggedIn", "false");
+        loginBtn.textContent = "Login";
+      } else {
+        // Login
+        localStorage.setItem("isLoggedIn", "true");
+        loginBtn.textContent = "Logout";
+        window.location.href = "./signup.html";
       }
     });
   </script>
